@@ -7,3 +7,5 @@ ON gi.product_id = p.PRODUCT_ID
 -- Filtering our erp id that are null
 where  gi.good_identification_type_id = 'ERP_ID'
 and gi.ID_VALUE IS NULL;
+
+
