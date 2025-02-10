@@ -12,3 +12,7 @@ join contact_mech cm on cm.CONTACT_MECH_ID = pcm.CONTACT_MECH_ID and cm.CONTACT_
 -- Contact number of parties and left join cause we want to fetch contact details if exist 
 left join telecom_number tn on tn.CONTACT_MECH_ID = pcm.CONTACT_MECH_ID
 where p.CREATED_DATE between '2023-06-01' and '2023-06-30';
+
+
+
+select * from product limit 1;
