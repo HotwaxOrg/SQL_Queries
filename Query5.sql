@@ -13,5 +13,8 @@ join facility f on f.FACILITY_ID = oisg.FACILITY_ID
 join order_item oi on oi.ORDER_ITEM_SEQ_ID = oh.ORDER_ITEM_SEQ_ID and oi.ORDER_ID = oh.ORDER_ID 
 -- joining product to get product id, product type id, internal name
 join product p on p.product_id = oi.PRODUCT_ID 
+join order_status os on os.order_id = oh.ORDER_ID and os.STATUS_ID = 'ORDER_COMPLETED'   
 -- Filtering out records based on our requirement
-where oh2.STATUS_ID = 'ORDER_COMPLETED' and oh2.ORDER_DATE between '2023-08-01' and '2023-08-31'; 
+where oh2.STATUS_ID = 'ORDER_COMPLETED' and os.STATUS_DATETIME between '2023-08-01' and '2023-08-31' limit 100;
+
+desc order_status;
