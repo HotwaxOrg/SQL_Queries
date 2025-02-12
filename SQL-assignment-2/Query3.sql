@@ -3,7 +3,8 @@ select
 	p.PRODUCT_ID,
 	p.INTERNAL_NAME ,
 	sum(oi.QUANTITY) Total_Quantity,
-	sum(oh.GRAND_TOTAL) Total_Revenue
+	sum(oi.UNIT_PRICE) Total_Revenue,
+	pa.CITY , pa.STATE_PROVINCE_GEO_ID 
 from
 	order_item oi
 -- Fetching out the product details
@@ -22,5 +23,17 @@ join postal_address pa on
 where
 	pa.STATE_PROVINCE_GEO_ID = 'NY'
 group by
-	p.PRODUCT_ID
+	p.PRODUCT_ID, pa.CITY , pa.STATE_PROVINCE_GEO_ID 
+HAVING SUM(oi.QUANTITY) = (
+    SELECT MAX(total_quantity)
+    FROM (
+        SELECT SUM(oi2.QUANTITY) AS total_quantity, pa2.CITY
+        FROM order_item oi2
+        JOIN order_contact_mech ocm2 ON ocm2.ORDER_ID = oi2.ORDER_ID
+        JOIN postal_address pa2 ON pa2.CONTACT_MECH_ID = ocm2.CONTACT_MECH_ID
+        WHERE pa2.STATE_PROVINCE_GEO_ID = 'NY'
+        GROUP BY pa2.CITY, oi2.PRODUCT_ID
+    ) AS city_sales
+    WHERE city_sales.CITY = pa.CITY
+)
 order by total_quantity desc;

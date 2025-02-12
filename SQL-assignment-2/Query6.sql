@@ -14,6 +14,7 @@ join inventory_item ii on
 	ii.PRODUCT_ID = p.PRODUCT_ID
 -- Fetching the reorder quantity abnd last updated stamp
 join product_facility pf on
-	pf.PRODUCT_ID = p.PRODUCT_ID ;
+	pf.PRODUCT_ID = p.PRODUCT_ID
+;
 
-
+select * from product_facility pf ;
