@@ -15,3 +15,7 @@ left join order_facility_change ofc
     on ofc.order_id = os.order_id
     where pb.picklist_id is null
     order by os.order_id;
+
+desc shipment_status;
+
+SELECT  * FROM shipment_status ;
