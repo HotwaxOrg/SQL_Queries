@@ -1,3 +1,5 @@
+-- Question: Items Where QOH and ATP Differ
+
 -- Fetching the columns
 select
 	p.PRODUCT_ID ,
@@ -10,3 +12,5 @@ from
 	-- Fetching the QOH and ATP and Facility id	
 join inventory_item ii on
 	ii.PRODUCT_ID = p.PRODUCT_ID;
+
+-- Query Cost: 2,367,489.86
