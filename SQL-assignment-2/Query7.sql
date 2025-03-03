@@ -1,3 +1,5 @@
+-- Question: Retrieve the Current Facility (Physical or Virtual) of Open Orders
+
 -- Fetching the required columns
 select
 	oh.ORDER_ID ,
@@ -19,3 +21,5 @@ join facility f on
 	-- Applying filters on the records
 where
 	oh.STATUS_ID = 'ORDER_APPROVED';
+
+-- Query Cost: 15,631,140
