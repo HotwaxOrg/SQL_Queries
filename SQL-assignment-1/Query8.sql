@@ -1,3 +1,6 @@
+-- Question:  Orders Completed Hourly
+
+-- Fetching the attributes
 select
 	COUNT(os.STATUS_ID) as Total_Orders,
 	DATE_FORMAT(os.STATUS_DATETIME, '%H') Hours
@@ -10,3 +13,7 @@ group by
 	hour(os.STATUS_DATETIME)
 order by
 	Hours;
+
+
+
+-- Query Cost: 15,106.45
