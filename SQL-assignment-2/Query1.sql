@@ -1,3 +1,5 @@
+-- Question: Shipping Addresses for October 2023 Orders
+
 -- Retrieving the columns
 select
 	oh.order_id,
@@ -38,3 +40,6 @@ where
 		and oh.ENTRY_DATE between '2023-10-01' and '2023-10-31')
 group by
 	oh.ORDER_ID;
+
+
+-- Query Cost: 51,097.95
