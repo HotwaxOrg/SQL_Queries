@@ -1,3 +1,5 @@
+-- Question:  Product IDs Across Systems
+
 -- Selecting the required attributes
 select
 	p.PRODUCT_ID,
@@ -23,3 +25,6 @@ left join GOOD_IDENTIFICATION shopify_sku
     on
 	p.PRODUCT_ID = shopify_sku.PRODUCT_ID
 	and shopify_sku.GOOD_IDENTIFICATION_TYPE_ID = 'SHOPIFY_PROD_SKU';
+
+
+-- Query Cost: 2,345,065.74
