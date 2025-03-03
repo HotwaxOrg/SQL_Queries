@@ -1,3 +1,5 @@
+-- Question: Top-Selling Product in New York
+
 -- Selecting the columns
 select
 	p.PRODUCT_ID,
@@ -37,3 +39,6 @@ HAVING SUM(oi.QUANTITY) = (
     WHERE city_sales.CITY = pa.CITY
 )
 order by total_quantity desc;
+
+
+-- Query Cost: 41,920.73
