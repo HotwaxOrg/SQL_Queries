@@ -1,3 +1,5 @@
+-- Question:  List All Active Physical Products
+
 -- Selecting required attributes
 select
 	p.PRODUCT_ID,
@@ -15,3 +17,6 @@ where
 		or p.SALES_DISCONTINUATION_DATE > NOW())
 	and (p.SUPPORT_DISCONTINUATION_DATE is null
 		or p.SUPPORT_DISCONTINUATION_DATE > NOW());
+
+
+-- Query Cost: 108,187.99
