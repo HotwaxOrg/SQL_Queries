@@ -1,3 +1,5 @@
+-- Question: Low Stock or Out of Stock Items Report
+
 -- Fetching the columns
 select
 	distinct p.PRODUCT_ID ,
@@ -16,3 +18,5 @@ join inventory_item ii on
 join product_facility pf on
 	pf.PRODUCT_ID = p.PRODUCT_ID
 ;
+
+-- Query Cost: 7,735,850.42
