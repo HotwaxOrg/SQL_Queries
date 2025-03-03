@@ -1,3 +1,5 @@
+-- Question: New Customers Acquired in June 2023
+
 -- Selecting attributes from the
 select
 	p.party_id,
@@ -27,3 +29,5 @@ left join telecom_number tn on
 	tn.CONTACT_MECH_ID = pcm.CONTACT_MECH_ID
 where
 	p.CREATED_DATE between '2023-06-01' and '2023-06-30';
+
+-- Query Cost: 17,147.92
