@@ -1,3 +1,5 @@
+-- Question:  Completed Orders in August 2023
+
 -- Fetching the columns 
 select
 	oh.ORDER_ID,
@@ -37,3 +39,6 @@ join order_status os on
 	-- Filtering out records based on our requirement
 where
 	 os.STATUS_DATETIME between '2023-08-01' and '2023-08-31';
+
+
+-- Query Cost: 301,421.56
