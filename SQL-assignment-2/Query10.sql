@@ -1,3 +1,5 @@
+-- Question: Total Orders by Sales Channel
+
 select
 	oh.SALES_CHANNEL_ENUM_ID ,
 	count(oh.ORDER_ID) TotalOrder,
@@ -9,3 +11,6 @@ from
 	order_header oh
 group by
 	oh.SALES_CHANNEL_ENUM_ID ;
+
+
+-- Query Cost: 8,450.55
