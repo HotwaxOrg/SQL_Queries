@@ -1,3 +1,5 @@
+-- Question:  Products Missing NetSuite ID
+
 -- Selecting the attributes 
 SELECT 
     p.PRODUCT_ID, 
@@ -13,3 +15,6 @@ LEFT JOIN
     -- Filtering our erp id that are null
 WHERE 
     gi.ID_VALUE IS NULL ;
+
+
+-- Query Cost: 835,433.5
