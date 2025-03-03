@@ -16,5 +16,3 @@ join inventory_item ii on
 join product_facility pf on
 	pf.PRODUCT_ID = p.PRODUCT_ID
 ;
-
-select * from product_facility pf ;
