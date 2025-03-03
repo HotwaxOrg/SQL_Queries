@@ -1,3 +1,5 @@
+-- Question:  Newly Created Sales Orders and Payment Methods
+
 -- Retrieving the columns
 select
 	oh.ORDER_ID ,
@@ -12,3 +14,7 @@ join order_payment_preference opp on
 	-- Filtering our the recent orders
 where
 	oh.STATUS_ID = 'ORDER_CREATED';
+
+
+
+-- Query Cost: 5,689.06
