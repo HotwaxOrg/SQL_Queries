@@ -3,7 +3,7 @@ select
 	oh.order_id,
 	oh.status_id,
 	oh.order_date,
-	or2.PARTY_ID,
+	or2.PARTY_ID CUSTOMER_ID,
 	p.FIRST_NAME ,
 	p.LAST_NAME ,
 	pa.ADDRESS1 ,
