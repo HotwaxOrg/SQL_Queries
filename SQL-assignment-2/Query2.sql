@@ -1,3 +1,5 @@
+-- Question: Orders from New York
+
 -- Fetching the columns
 select
 	oh.ORDER_ID,
@@ -11,7 +13,7 @@ select
 	pa.ADDRESS2,
 	pa.CITY,
 	pa.STATE_PROVINCE_GEO_ID,
-	pa.POSTAL_CODE,
+	pa.POSTAL_CODE
 from
 	order_header oh
 -- Filtering out the customers
@@ -34,3 +36,6 @@ where
 group by
 	oh.order_id
 ;
+
+
+-- Query Cost: 131,099.54
