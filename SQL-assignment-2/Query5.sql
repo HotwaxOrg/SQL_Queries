@@ -1,3 +1,6 @@
+-- Question: Lost and Damaged Inventory
+
+-- Fetching the attributes
 select
 	iiv.INVENTORY_ITEM_ID ,
 	iiv.VARIANCE_REASON_ID ,
@@ -11,3 +14,5 @@ join inventory_item ii on
 	ii.INVENTORY_ITEM_ID = iiv.INVENTORY_ITEM_ID;
 
 
+
+-- Query Cost: 2,591,657.19
