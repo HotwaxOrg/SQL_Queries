@@ -1,3 +1,5 @@
+-- Question: Order Item Current Status Changed Date-Time
+
 select
 	oi.ORDER_ID,
 	oi.ORDER_ITEM_GROUP_SEQ_ID ,
@@ -6,3 +8,6 @@ select
 	oi.CHANGE_BY_USER_LOGIN_ID ChangedBy
 from
 	order_item oi ;
+
+
+-- Query Cost: 21,095.11
