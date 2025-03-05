@@ -1,3 +1,5 @@
+-- Problem Statement: Transfer Orders Without Inventory Reservation
+
 select
 	it.ORDER_ID ,
 	it.FACILITY_ID ,
@@ -8,3 +10,5 @@ select
 	it.STATUS_ID
 from
 	inventory_transfer it ;
+
+-- Cost: 0.35
