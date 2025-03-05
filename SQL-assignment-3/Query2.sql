@@ -1,3 +1,6 @@
+-- Problem Statement: Customer service and finance often need insights into returned items to 
+-- manage refunds, replacements, and inventory restocking.
+
 -- Fetching the columns
 select
 	rh.RETURN_ID ,
@@ -19,4 +22,8 @@ join order_header oh on
 	oh.ORDER_ID = ri.ORDER_ID
 	-- Getting the return status datetime
 join return_status rs on
-	rs.RETURN_ID = rh.RETURN_ID ;
+	rs.RETURN_ID = rh.RETURN_ID
+where
+	rh.STATUS_ID = 'RETURN_COMPLETED';
+
+-- Cost: 15,830.44
