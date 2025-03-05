@@ -1,3 +1,5 @@
+-- Problem Statement:  Detailed Return Information
+
 -- Fetching the columns
 select
 	rh.RETURN_ID ,
@@ -20,3 +22,5 @@ join order_header oh on
 	-- Getting the adjustment type, amount and comments
 join return_adjustment ra on
 	ra.RETURN_ID = rh.RETURN_ID ;
+
+-- Cost: 7,657.24
