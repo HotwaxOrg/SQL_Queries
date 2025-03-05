@@ -1,3 +1,5 @@
+-- Problem Statement: List of Warehouse Pickers
+
 -- Fetching the columns
 select
 	p.PICKLIST_ID ,
@@ -15,4 +17,10 @@ join picklist_role pr on
 join person p2 on
 	p2.PARTY_ID = pr.PARTY_ID
 join party pty on
-	pty.PARTY_ID = pr.PARTY_ID ;
+	pty.PARTY_ID = pr.PARTY_ID
+join facility f on
+	f.FACILITY_ID = p.FACILITY_ID
+where
+	f.FACILITY_TYPE_ID like '%WAREHOUSE';
+
+-- Cost: 2,594.34
