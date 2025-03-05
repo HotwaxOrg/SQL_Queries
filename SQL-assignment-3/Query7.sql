@@ -1,3 +1,5 @@
+-- Problem Statement: Store with Most One-Day Shipped Orders (Last Month)
+
 -- Fetching the columns
 select
 	oisg.FACILITY_ID ,
@@ -24,3 +26,5 @@ group by
 	oisg.FACILITY_ID
 order by
 	TotalOneDayShipOrder desc;
+
+-- Cost: 59,141.61
