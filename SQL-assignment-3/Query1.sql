@@ -1,3 +1,6 @@
+-- Problem Statement: Merchants need to track 
+-- only physical items (requiring shipping and fulfillment) for logistics and shipping-cost analysis.
+
 -- Fetching the columns 
 select
 	oi.ORDER_ID ,
@@ -28,5 +31,7 @@ join order_status os on
 	and os.STATUS_ID = oh.STATUS_ID
 -- Filtering out as per our requirement
 where
-	pt.IS_PHYSICAL = 'y'
-	and p.IS_VARIANT = 'y';
+	pt.IS_PHYSICAL = 'y' and oh.ORDER_TYPE_ID = 'SALES_ORDER' and oh.STATUS_ID = 'ORDER_COMPLETED';
+
+
+-- Cost: 112,104.67
