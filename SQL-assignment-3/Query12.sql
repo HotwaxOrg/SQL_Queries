@@ -1,3 +1,5 @@
+-- Problem Statement: Orders Without Picklist
+
 select
 	os.order_id,
 	oh.order_date,
@@ -22,3 +24,5 @@ where
 	pb.picklist_id is null
 order by
 	os.order_id;
+
+-- Cost: 119,347.13
