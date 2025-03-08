@@ -11,7 +11,7 @@ Facilities should have a latitude and longitude configured.
 - **Tracking Code**  
 - **Label Cost**  
 
-'''
+```
 select
 	oh.ORDER_NAME TRANSFER_ORDER_NAME,
 	s.ORIGIN_FACILITY_ID TRANSFER_ORDER_ORIGIN_FACILITY_ID,
@@ -41,7 +41,7 @@ where
 	and opa.LONGITUDE is not null
 	and dpa.LATITUDE is not null
 	and dpa.LONGITUDE is not null;
-'''
+```
 
 # Cost - 4.31
 # Explanation -
