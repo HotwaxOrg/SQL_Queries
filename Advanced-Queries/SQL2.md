@@ -1,12 +1,12 @@
 # Query2 - Digital Order Items
 Fetch a list of completed order items that were not POS Completed sales but also did not need to be shipped to the customer.
 
-Fields to include in results:
+## Expected Fields in the Result
 
-Order Id
-Item Seq Id
-Item Attr (select any)
-Item total
+- **Order Id**  
+- **Item Seq Id**  
+- **Item Attr** (select any)  
+- **Item Total**  
 
 ```
 select
