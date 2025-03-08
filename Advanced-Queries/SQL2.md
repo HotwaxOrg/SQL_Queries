@@ -27,7 +27,8 @@ join order_item_ship_group oisg on
 	oisg.ORDER_ID = oi.ORDER_ID
 where
 	oh.SALES_CHANNEL_ENUM_ID != 'POS_SALES_CHANNEL'
-	and oisg.SHIPMENT_METHOD_TYPE_ID = 'STOREPICKUP'
+	and (oisg.SHIPMENT_METHOD_TYPE_ID = 'STOREPICKUP'
+		or oisg.SHIPMENT_METHOD_TYPE_ID = 'NO_SHIPPING')
 group by
 	oh.ORDER_ID;
 ```
