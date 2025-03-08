@@ -1,12 +1,13 @@
 # Query1 - Non Return Refunds
 Get a list of all refund payments made on orders due to cancelations. No return refunds should be included.
 
-The expected fields in the result are:
-Order Id
-Payment internal Id
-Payment manual reference
-Payment parent reference
-Refund amount from payment pref
+## Expected Fields in the Result
+
+- **Order Id**  
+- **Payment Internal Id**  
+- **Payment Manual Reference**  
+- **Payment Parent Reference**  
+- **Refund Amount from Payment Pref**  
 
 ```
 select
