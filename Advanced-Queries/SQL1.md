@@ -30,4 +30,8 @@ where
 		return_item ri );
 ```
 # Cost - 75,693.78
+# Explanation 
+This problem statement required to fetch data for the refunds made on payments due to cancellation not after it has been shipped. 
+It starts by selecting relevant columns from the order_header. The order_payment_preference table is joined with order_header based on ORDER_ID, filtering for payments with a status of 'PAYMENT_REFUNDED'. The order_item table is joined to include only orders where at least one item has a status of 'ITEM_CANCELLED'. The NOT EXISTS clause ensures that the selected orders do not appear in the return_item table, meaning that no return has been initiated for them. 
 
+![image](https://github.com/user-attachments/assets/09719854-ff41-4e01-9f09-32ee62aa19af)
