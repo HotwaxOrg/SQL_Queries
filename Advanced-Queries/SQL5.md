@@ -50,3 +50,6 @@ The query selects the order name (TRANSFER_ORDER_NAME) from the order_header tab
 It extracts the origin and destination facility IDs from the shipment table and computes the distance in kilometers between the two locations using the haversine formula (a mathematical formula to calculate distances based on latitude and longitude). 
 The required latitude and longitude values are fetched from the postal_address table for both the origin and destination addresses. Additionally, the tracking number is obtained from the order_item_ship_group table. The query specifically filters records where the order type is a TRANSFER_ORDER and ensures
 that valid latitude and longitude values exist for the calculation.
+
+![image](https://github.com/user-attachments/assets/bb542f18-2a43-4a05-810b-fd583a96d674)
+
