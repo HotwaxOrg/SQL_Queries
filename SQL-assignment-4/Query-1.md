@@ -14,7 +14,7 @@ select
 	s.SHIPMENT_ID,
 	s.ORIGIN_FACILITY_ID,
 	ss.STATUS_DATE SHIPMENT_DATE,
-	s.PRIMARY_ORDER_ID
+	s.PRIMARY_ORDER_ID ORDER_ID
 from
 	shipment s
 join shipment_status ss on
