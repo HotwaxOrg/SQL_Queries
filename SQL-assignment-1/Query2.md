@@ -27,4 +27,7 @@ where
 
 -- Query Cost: 108,187.99
 
+![Screenshot from 2025-03-25 10-02-23](https://github.com/user-attachments/assets/db482c89-134d-4f30-a488-48b79836595a)
+
+
 
