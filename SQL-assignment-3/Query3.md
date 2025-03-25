@@ -1,8 +1,13 @@
--- Problem Statement: Single-Return Orders (Last Month)
+## Problem Statement: Single-Return Orders (Last Month) - The mechandising team needs a list of orders that only have one return.
 
+# Attributes
+- **PARTY_ID**
+- **FIRST_NAME**
+
+```
 -- Fetching the columns
 select
-	rh.from_party_id ,
+	rh.from_party_id PARTY_ID ,
 	p2.FIRST_NAME
 from
 	return_header rh
@@ -19,6 +24,8 @@ group by
 	ri.ORDER_ID
 having
 	count(rh.RETURN_ID) = 1;
-
+```
 
 -- Cost: 13,258.56
+
+![image](https://github.com/user-attachments/assets/fe2828d4-5247-4e37-83f6-6be7d87c7798)
