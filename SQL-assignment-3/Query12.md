@@ -1,5 +1,13 @@
--- Problem Statement: Orders Without Picklist
+# Problem Statement: Orders Without Picklist - A picklist is necessary for warehouse staff to gather items. Orders missing a picklist might be delayed and need attention.
 
+## Attributes
+- **ORDER_ID**
+- **ORDER_DATE**
+- **ORDER_STATUS**
+- **FACILITY_ID**
+- **DURATION**
+
+```
 select
 	os.order_id,
 	oh.order_date,
@@ -24,5 +32,10 @@ where
 	pb.picklist_id is null
 order by
 	os.order_id;
+```
 
 -- Cost: 119,347.13
+
+![image](https://github.com/user-attachments/assets/4f0e5fa6-24a6-47bc-8ba0-dc29529772c8)
+
+
