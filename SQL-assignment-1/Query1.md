@@ -43,5 +43,6 @@ WHERE
 
 ## Query Cost: 17,147.92
 
-![image](https://github.com/user-attachments/assets/569913af-e420-45bb-9d7d-ec40ee5af907)
+![image](https://github.com/user-attachments/assets/949e5f5f-0682-4186-a87d-3a4ab6310473)
+
 
