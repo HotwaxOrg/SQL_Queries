@@ -22,4 +22,5 @@ group by
 
 
 -- Query Cost: 28,069.21
+
 ![image](https://github.com/user-attachments/assets/9ef74ec6-f7af-4488-ab1e-be3c0d043ba8)
