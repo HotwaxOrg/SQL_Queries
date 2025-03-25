@@ -1,10 +1,21 @@
--- Question: Shipping Addresses for October 2023 Orders
+# Question: Shipping Addresses for October 2023 Orders - Customer Service might need to verify addresses for orders placed or completed in October 2023. This helps ensure shipments are delivered correctly and prevents address-related issues.
 
+## Attributes
+- **ORDER_ID**  
+- **PARTY_ID** (Customer ID)  
+- **CUSTOMER_NAME** (or **FIRST_NAME** / **LAST_NAME**)  
+- **STREET_ADDRESS**  
+- **CITY**  
+- **STATE_PROVINCE**  
+- **POSTAL_CODE**  
+- **COUNTRY_CODE**  
+- **ORDER_STATUS**  
+- **ORDER_DATE**  
+
+```
 -- Retrieving the columns
 select
 	oh.order_id,
-	oh.status_id,
-	oh.order_date,
 	or2.PARTY_ID CUSTOMER_ID,
 	p.FIRST_NAME ,
 	p.LAST_NAME ,
@@ -13,7 +24,9 @@ select
 	pa.CITY ,
 	pa.STATE_PROVINCE_GEO_ID ,
 	pa.POSTAL_CODE ,
-	pa.COUNTRY_GEO_ID
+	pa.COUNTRY_GEO_ID,
+	oh.status_id,
+	oh.order_date
 from
 	order_header oh
 	-- Fetching all the orders placed by a customer
@@ -40,6 +53,8 @@ where
 		and oh.ENTRY_DATE between '2023-10-01' and '2023-10-31')
 group by
 	oh.ORDER_ID;
-
+```
 
 -- Query Cost: 51,097.95
+
+![image](https://github.com/user-attachments/assets/ae76058b-2480-4c75-865f-a32b9e95dc07)
