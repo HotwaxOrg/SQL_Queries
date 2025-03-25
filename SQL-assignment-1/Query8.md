@@ -1,4 +1,8 @@
--- Question:  Orders Completed Hourly
+# Question:  Orders Completed Hourly - Operations teams may want to see how orders complete across the day to schedule staffing.
+
+## Attributes
+- **TOTAL_ORDER**
+- **HOURS**
 
 -- Fetching the attributes
 select
@@ -14,6 +18,6 @@ group by
 order by
 	Hours;
 
-
-
 -- Query Cost: 15,106.45
+
+![image](https://github.com/user-attachments/assets/1106b4c0-09f2-4404-a9a6-bd4fe05de2b8)
