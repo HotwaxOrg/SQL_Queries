@@ -1,19 +1,34 @@
--- Question:  Completed Orders in August 2023
+# Question:  Completed Orders in August 2023 - After running similar reports for a previous month, you now need all completed orders in August 2023 for analysis.
 
+## Attributes
+- **PRODUCT_ID**  
+- **PRODUCT_TYPE_ID**  
+- **PRODUCT_STORE_ID**  
+- **TOTAL_QUANTITY**  
+- **INTERNAL_NAME**  
+- **FACILITY_ID**  
+- **EXTERNAL_ID**  
+- **FACILITY_TYPE_ID**  
+- **ORDER_HISTORY_ID**  
+- **ORDER_ID**  
+- **ORDER_ITEM_SEQ_ID**  
+- **SHIP_GROUP_SEQ_ID**
+  
+```
 -- Fetching the columns 
 select
-	oh.ORDER_ID,
-	oh.ORDER_ITEM_SEQ_ID ,
-	oh.ORDER_HISTORY_ID ,
-	oh.SHIP_GROUP_SEQ_ID ,
-	oh2.EXTERNAL_ID ,
-	f.FACILITY_ID,
-	f.PRODUCT_STORE_ID ,
-	f.FACILITY_TYPE_ID ,
-	oi.QUANTITY,
 	p.PRODUCT_ID ,
 	p.PRODUCT_TYPE_ID ,
-	p.INTERNAL_NAME
+	f.PRODUCT_STORE_ID ,
+	oi.QUANTITY TOTAL_QUANTITY,
+	p.INTERNAL_NAME,
+	f.FACILITY_ID,
+	oh2.EXTERNAL_ID ,
+	f.FACILITY_TYPE_ID ,
+	oh.ORDER_HISTORY_ID ,
+	oh.ORDER_ID,
+	oh.ORDER_ITEM_SEQ_ID ,
+	oh.SHIP_GROUP_SEQ_ID 
 	-- It contains order, order item seq, order history and ship group seq id
 from
 	order_history oh
@@ -40,5 +55,8 @@ join order_status os on
 where
 	 os.STATUS_DATETIME between '2023-08-01' and '2023-08-31';
 
+```
 
 -- Query Cost: 301,421.56
+![image](https://github.com/user-attachments/assets/1e0f7354-bb58-4e36-84f9-d9b0589e6e9f)
+
