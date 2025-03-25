@@ -4,7 +4,7 @@
 - **TOTAL_ORDERS**
 - **CHANGE_REASON**
 
-``
+```
 -- Fetching the attributes
 select
 	count(os.STATUS_ID) Total_Orders,
