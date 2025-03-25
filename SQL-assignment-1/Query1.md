@@ -1,4 +1,10 @@
 -- Question: New Customers Acquired in June 2023
+-- PARTY_ID
+-- FIRST_NAME
+-- LAST_NAME
+-- EMAIL
+-- PHONE
+-- ENTRY_DATE
 
 -- Selecting attributes from the
 select
@@ -31,3 +37,6 @@ where
 	p.CREATED_DATE between '2023-06-01' and '2023-06-30';
 
 -- Query Cost: 17,147.92
+
+![image](https://github.com/user-attachments/assets/569913af-e420-45bb-9d7d-ec40ee5af907)
+
