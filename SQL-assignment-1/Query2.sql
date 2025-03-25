@@ -1,5 +1,11 @@
--- Question:  List All Active Physical Products
+# Question:  List All Active Physical Products: Merchandising teams often need a list of all physical products to manage logistics, warehousing, and shipping.
 
+## Attributes:
+- **PRODUCT_ID**
+- **PRODUCT_TYPE_ID** 
+- **INTERNAL_NAME**
+
+```
 -- Selecting required attributes
 select
 	p.PRODUCT_ID,
@@ -17,6 +23,8 @@ where
 		or p.SALES_DISCONTINUATION_DATE > NOW())
 	and (p.SUPPORT_DISCONTINUATION_DATE is null
 		or p.SUPPORT_DISCONTINUATION_DATE > NOW());
-
+```
 
 -- Query Cost: 108,187.99
+
+
