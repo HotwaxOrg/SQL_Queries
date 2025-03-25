@@ -15,12 +15,11 @@
 - **SHIP_GROUP_SEQ_ID**
   
 ```
--- Fetching the columns 
 select
 	p.PRODUCT_ID ,
 	p.PRODUCT_TYPE_ID ,
 	f.PRODUCT_STORE_ID ,
-	oi.QUANTITY TOTAL_QUANTITY,
+	sum(oi.QUANTITY) TOTAL_QUANTITY,
 	p.INTERNAL_NAME,
 	f.FACILITY_ID,
 	oh2.EXTERNAL_ID ,
@@ -28,7 +27,7 @@ select
 	oh.ORDER_HISTORY_ID ,
 	oh.ORDER_ID,
 	oh.ORDER_ITEM_SEQ_ID ,
-	oh.SHIP_GROUP_SEQ_ID 
+	oh.SHIP_GROUP_SEQ_ID
 	-- It contains order, order item seq, order history and ship group seq id
 from
 	order_history oh
@@ -53,10 +52,11 @@ join order_status os on
 	and os.STATUS_ID = 'ORDER_COMPLETED'
 	-- Filtering out records based on our requirement
 where
-	 os.STATUS_DATETIME between '2023-08-01' and '2023-08-31';
-
+	 os.STATUS_DATETIME between '2023-08-01' and '2023-08-31'
+group by
+	oh.ORDER_ID ;
 ```
 
--- Query Cost: 301,421.56
+-- Query Cost: 282,039.27
 ![image](https://github.com/user-attachments/assets/8980bf18-4329-4009-b3ad-8e6c17db8432)
 
