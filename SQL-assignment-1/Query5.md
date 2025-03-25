@@ -58,5 +58,5 @@ where
 ```
 
 -- Query Cost: 301,421.56
-![image](https://github.com/user-attachments/assets/1e0f7354-bb58-4e36-84f9-d9b0589e6e9f)
+![image](https://github.com/user-attachments/assets/8980bf18-4329-4009-b3ad-8e6c17db8432)
 
