@@ -4,6 +4,7 @@
 - **TOTAL_ORDER**
 - **HOURS**
 
+```
 -- Fetching the attributes
 select
 	COUNT(os.STATUS_ID) as Total_Orders,
@@ -17,6 +18,7 @@ group by
 	hour(os.STATUS_DATETIME)
 order by
 	Hours;
+```
 
 -- Query Cost: 15,106.45
 
