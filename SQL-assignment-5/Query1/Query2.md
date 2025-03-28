@@ -1,13 +1,13 @@
 # Question 2: Rejected Orders with Variance
 ### When a store rejects an order, they can specify whether it is rejected with "variance" or "no variance." Rejections with variance indicate that the item(s) should be marked as out of stock.
 ### Write an SQL query to:
--- **Identify all subsequent orders containing the rejected item(s) that need to be flagged for rejection.**
--- **Return a list of affected orders.**
+- **Identify all subsequent orders containing the rejected item(s) that need to be flagged for rejection.**
+- **Return a list of affected orders.**
 
 ### Fields:
--- **Rejected Order ID**
--- **Rejected Product ID**
--- **Affected Order IDs**
+- **Rejected Order ID**
+- **Rejected Product ID**
+- **Affected Order IDs**
 
 ```
 -- Fetching the attributes
