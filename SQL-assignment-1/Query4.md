@@ -26,7 +26,7 @@ FROM
 GROUP BY gi.product_id;
 ```
 
--- Query Cost: 2,345,065.74
+-- Query Cost: 272,065.74
 
 ![image](https://github.com/user-attachments/assets/0fdd5d37-5dd6-4d86-ac1f-cbcdc58a3c30)
 
