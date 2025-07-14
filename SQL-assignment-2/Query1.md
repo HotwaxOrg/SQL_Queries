@@ -46,11 +46,11 @@ join contact_mech cm on
 join postal_address pa on
 	pa.CONTACT_MECH_ID = cm.CONTACT_MECH_ID
 	-- Filtering our records based on the our requirements
+join order_status os on
+	os.order_id = oh.order_id
 where
-	((oh.ORDER_DATE between '2023-10-01' and '2023-10-31')
-		and (oh.STATUS_ID = 'ORDER_CREATED'))
-	or (oh.STATUS_ID = 'ORDER_COMPLETED'
-		and oh.ENTRY_DATE between '2023-10-01' and '2023-10-31')
+	oh.STATUS_ID in ("ORDER_CREATED", "ORDER_COMPLETED") and
+	 (os.STATUS_DATETIME between '2023-10-01' and '2023-10-31')
 group by
 	oh.ORDER_ID;
 ```
