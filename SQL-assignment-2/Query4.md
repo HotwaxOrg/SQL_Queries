@@ -9,9 +9,10 @@
 
 ```
 -- Fetching the attributes
+-- Fetching the attributes
 select
 	f.FACILITY_ID ,
-	f.FACILITY_NAME  ,
+	f.FACILITY_NAME ,
 	count(oi.ORDER_ID) Total_Orders,
 	sum(oi.UNIT_PRICE) Total_Revenue,
 	CONCAT(
@@ -22,11 +23,10 @@ from
 	-- Getting the order details
 join order_header oh on
 	oh.ORDER_ID = oi.ORDER_ID
+	and oh.STATUS_ID = "ORDER_COMPLETED"
 	-- Getting the shipment details
-join order_shipment os on
-	os.order_id = oi.order_id
 join shipment s on
-	s.SHIPMENT_ID = os.SHIPMENT_ID
+	s.PRIMARY_ORDER_ID = oh.ORDER_ID
 	-- Getting the facility details
 join facility f on
 	f.FACILITY_ID = s.ORIGIN_FACILITY_ID
