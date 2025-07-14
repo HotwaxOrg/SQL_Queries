@@ -10,6 +10,7 @@
 
 ```
 -- Fetching the attributes
+-- Fetching the attributes
 select
 	iiv.INVENTORY_ITEM_ID ,
 	ii.PRODUCT_ID ,
@@ -20,14 +21,13 @@ select
 from
 	inventory_item_variance iiv
 join inventory_item ii on
-	ii.INVENTORY_ITEM_ID = iiv.INVENTORY_ITEM_ID
-where
-	iiv.VARIANCE_REASON_ID = 'VAR_LOST'
-	or iiv.VARIANCE_REASON_ID = 'DAMAGED';
+	(ii.INVENTORY_ITEM_ID = iiv.INVENTORY_ITEM_ID) and (iiv.VARIANCE_REASON_ID = 'VAR_LOST'
+	or iiv.VARIANCE_REASON_ID = 'DAMAGED')
+;
 ```
 
 
--- Query Cost: 591,146.48
+-- Query Cost: 446,760.92
 
 ![image](https://github.com/user-attachments/assets/2c15321d-2741-441f-96e3-a1282cdc2e25)
 
